@@ -31,7 +31,7 @@ $ go run cmd/main.go text.txt 100
 ```bash
 ./scripts/build.sh .
 ```
-> After that you can pass parameters to docker container
+> After that you can pass parameters to docker container. Notw that you should specify volume with your file and map it to container. In example above file located in current working directory
 ```bash
-docker run --rm typewriter:<tag> <filename> <delay>
+docker run --rm "$PWD:$PWD" -w "$PWD" typewriter:<tag> <filename> <delay>
 ```
