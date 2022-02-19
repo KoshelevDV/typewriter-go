@@ -3,6 +3,7 @@ package utils
 import (
 	"bufio"
 	"os"
+	"time"
 )
 
 func FileToSlice(file string) (lines []string) {
@@ -33,4 +34,8 @@ func MaxString(strs []string) (strLen int) {
 		}
 	}
 	return
+}
+
+func Duration(t time.Time) time.Duration {
+	return time.Since(t)
 }
