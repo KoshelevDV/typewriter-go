@@ -16,7 +16,7 @@ how are you?how are you?
 ```bash
 $ go run cmd/main.go text.txt 100
 ```
->Command outpul will be looking something like this
+>Command output will be looking something like this
 ```bash
 100.117ms  ->  竜田川
 101.3499ms ->  神代も聞
