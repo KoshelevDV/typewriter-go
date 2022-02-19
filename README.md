@@ -1,7 +1,7 @@
 # Golang TypeWriter
 This app allows you to type content of the files to terminal with the fixed time for every line
 
-## Example
+## Example. Raw
 >file text.txt
 ```txt 
 竜田川
@@ -25,4 +25,13 @@ $ go run cmd/main.go text.txt 100
 100.1498ms ->  how are you?
 103.676ms  ->  how are you?how are you?
 102.9189ms ->  川u?how arもe yo
+```
+## Example. Docker
+> First, you should build docker image using `scripts/build.sh` script from the repo root directory
+```bash
+./scripts/build.sh .
+```
+> After that you can pass parameters to docker container
+```bash
+docker run --rm typewriter:<tag> <filename> <delay>
 ```
